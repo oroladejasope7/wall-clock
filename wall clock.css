@@ -1,0 +1,75 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+.clock{
+    background: #fff url(assignment/depositphotos_90796066-stock-photo-blank-clock-dial-without-hands.jpg) no-repeat center;
+    background-size: 100%;
+    height: 40em;
+    position: relative;
+    width: 40em;
+    margin: 50px auto;
+    margin-top: 0px;
+    margin-bottom: -30px;
+    animation-name: rotate;
+}
+  .minutes-container, .hours-container, .seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hours {
+    background: rgb(24, 23, 23);
+    border-radius: 7px;
+    height: 30%;
+    width: 2.5%;
+    position: absolute;
+    left: 48.75%;
+    top: 26.5%;
+}
+.minutes {
+    background: rgb(24, 23, 23);
+    border-radius: 6px;
+    height: 36%;
+    width: 2%;
+    position: absolute;
+    left: 49%;
+    top: 22%;
+}
+.seconds {
+    background: red;
+    border-radius: 5px;
+    height: 42%;
+    width: 1%;
+    position: absolute;
+    left: 49.5%;
+    top: 18%;
+}
+.dot{
+    clip-path: circle(50% at 50% 50%);
+    background: red;
+    height: 6%;
+    width: 6%;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+}
+
+@keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+  .hours-container {
+    animation: rotate 43200s infinite linear;
+  }
+  .minutes-container {
+    animation: rotate 3600s infinite linear;
+  }
+  .seconds-container {
+    animation: rotate 60s infinite linear;
+  } 
